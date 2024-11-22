@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p /backup
+
+file_name="backup_$(date +'%Y-%m-%d').tar.gz"
+log_name="backup_log_$(date +'%Y-%m-%d').log"
+
+tar -czvf /backup/"$file_name" "/home/ubuntu/test" "$@" > "/home/ubuntu/logi_lab/$log_name"
